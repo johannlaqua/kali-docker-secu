@@ -1,0 +1,10 @@
+FROM kalilinux/kali-rolling
+LABEL maintainer="Johann LAQUA"
+
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    kali-linux-top10 \
+&& apt-get clean all
+
+CMD ["/bin/bash"]
